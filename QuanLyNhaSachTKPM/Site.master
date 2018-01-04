@@ -60,7 +60,7 @@
                     <asp:TextBox ID="txtSearch" runat="server" placeholder="Nhập từ khóa cần tìm"></asp:TextBox>
                     <asp:ImageButton ID="btnSearch" runat="server" ImageUrl="~/image/search.png" Title="Tìm kiếm" OnClick="btnSearch_Click"/>
                 </div>
-                <marquee style="width: 52%" ><asp:Label ID="Label1" runat="server" style="font-size: 20pt; font-weight: 700; color: #ff0000" Text="QNH Bookstore Kính Chào Quý Khách !" Width="54%"></asp:Label></marquee>
+                <marquee style="width: 52%"><asp:Label ID="Label1" runat="server" style="font-size: 20pt; font-weight: 700; color: #ff0000" Text="QNH Bookstore Kính Chào Quý Khách !" Width="54%"></asp:Label></marquee>
             </div>
             <div id="menu" style="background-color:#006600; height:40px;">
                 <ul>

@@ -40,7 +40,7 @@
         <asp:ListItem Value="0">Nhiều nhất đến ít nhất</asp:ListItem>
         <asp:ListItem Value="1">Ít nhất đến nhiều nhất</asp:ListItem>
     </asp:DropDownList>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" DataKeyNames="MaHang" AllowPaging="True" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" DataKeyNames="MaSach" AllowPaging="True" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging">
         <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
             <asp:TemplateField HeaderText="STT">

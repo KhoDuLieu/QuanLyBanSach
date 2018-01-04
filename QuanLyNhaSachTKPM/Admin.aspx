@@ -43,7 +43,7 @@
                 <asp:DropDownList ID="ddlMaNXB" runat="server" Width="200px"></asp:DropDownList>
             </td>
             <td>
-                <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToValidate="ddlMathuonghieu" ErrorMessage="* Chọn nhà xuất bản" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="ddlMaNXB" ErrorMessage="* Chọn nhà xuất bản" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
             </td>
         </tr>
         <tr>
@@ -52,7 +52,7 @@
                 <asp:DropDownList ID="ddlMaTL" runat="server" Width="200px"></asp:DropDownList>
             </td>
             <td>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="ddlMaloai" ErrorMessage="* Chọn thể loại" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
+                <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="ddlMaTL" ErrorMessage="* Chọn thể loại" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
             </td>
         </tr>
         <tr>
@@ -61,16 +61,16 @@
                 <asp:DropDownList ID="ddlMaTG" runat="server" Width="200px"></asp:DropDownList>
             </td>
             <td>
-                <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="ddlMaTG" ErrorMessage="* Chọn tác giả" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
+                <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToValidate="ddlMaTG" ErrorMessage="* Chọn tác giả" ForeColor="Red" Operator="NotEqual" ValueToCompare="0"></asp:CompareValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style1">Tên hàng:</td>
+            <td class="auto-style1">Tên sách:</td>
             <td class="auto-style5">
                 <asp:TextBox ID="txtTenSach" runat="server" Width="320px"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenhang" Display="Dynamic" ErrorMessage="* Nhập tên hàng" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenSach" Display="Dynamic" ErrorMessage="* Nhập tên hàng" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -98,6 +98,8 @@
             <td class="auto-style5">
                 <asp:FileUpload ID="txtHinhanh" runat="server" Width="325px" />
             </td>
+
+
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtHinhanh" Display="Dynamic" ErrorMessage="* Chọn hình ảnh" ForeColor="Red"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -33,7 +33,7 @@
         <asp:ListItem Value="0">Số lượng tăng dần</asp:ListItem>
         <asp:ListItem Value="1">Số lượng giảm dần</asp:ListItem>
     </asp:DropDownList>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" DataKeyNames="MaHang" AllowPaging="True" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" DataKeyNames="MaSach" AllowPaging="True" PageSize="20" OnPageIndexChanging="GridView1_PageIndexChanging">
         <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
             <asp:TemplateField HeaderText="STT">

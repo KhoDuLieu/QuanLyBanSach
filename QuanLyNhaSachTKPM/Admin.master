@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Nhà Sách Hueic</title>
+    <title>Nhà Sách BookStore</title>
     <link href="css/Admin.css" rel="stylesheet" />
     <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -21,9 +21,9 @@
         <div id="menu">
             <ul>
                 <li><a href="Admin.aspx">Quản lý Sách</a></li>
-                <li><a href="">Quản lý Nhà xuất bản</a></li>
-                <li><a href="">Quản lý Thể loại</a></li>
-                <li><a href="">Quản lý Tác giả</a></li>
+                <li><a href="NhaXuatBan.aspx">Quản lý Nhà xuất bản</a></li>
+                <li><a href="TheLoai.aspx">Quản lý Thể loại</a></li>
+                <li><a href="TacGia.aspx">Quản lý Tác giả</a></li>
                 <li><a href="QuanLyTaiKhoan.aspx">Quản lý Tài khoản</a></li>
                 <li><a href="QuanLyHoaDon.aspx">Quản lý Hóa đơn</a></li>
                 <li><a href="ThongKeBaoCao.aspx">Thống kê - Báo cáo</a></li>

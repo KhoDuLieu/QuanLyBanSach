@@ -36,7 +36,7 @@ public class HoaDonBLL
             new SqlParameter("@SDTNguoiNhan",SqlDbType.NVarChar),
             new SqlParameter("@EmailNguoiNhan",SqlDbType.NVarChar),
             new SqlParameter("@NgayDatHang",SqlDbType.DateTime),
-         new SqlParameter("@MaUser",SqlDbType.Int)};
+            new SqlParameter("@MaUser",SqlDbType.Int)};
         par[0].Value = hd.Mahd;
         par[1].Value = hd.Tennguoidat;
         par[2].Value = hd.Diachinguoidat;
@@ -104,7 +104,7 @@ public class HoaDonBLL
     public int xoaCTHD(string MaHD)
     {
         conn.Open();
-        SqlCommand cmd = new SqlCommand("delete from CTHOADON where MaHD=@MaHD", conn);
+        SqlCommand cmd = new SqlCommand("delete from CTHD where MaHD=@MaHD", conn);
         SqlParameter[] par = new SqlParameter[]{
             new SqlParameter("@MaHD",SqlDbType.NVarChar)};
         par[0].Value = MaHD;

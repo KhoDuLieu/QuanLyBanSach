@@ -19,9 +19,9 @@ public partial class Admin : System.Web.UI.Page
         if (!IsPostBack)
         {
             loadSach();
-            showNhaXuatBan(); // hiển thị nhà xuất bản
-            showLoai(); //hiển thị loại hàng
-            showTacGia(); // hiển thị nhà xuất bản
+            showNhaXuatBan(); 
+            showLoai(); 
+            showTacGia(); 
         }
     }
     protected void btnThem_Click(object sender, EventArgs e)
@@ -96,25 +96,10 @@ public partial class Admin : System.Web.UI.Page
         lblThongBao.Visible = true;
         lblThongBao.Text = "Xóa thành công!";
     }
-    private void showNhaXuatBan()
-    {
-        // Lấy ra thông tin hàng theo thương hiệu
-        ddlMaNXB.Items.Clear();
-        ddlMaNXB.Items.Add(new ListItem("Chọn nhà xuất bản", "0"));
-        SqlDataAdapter ad = new SqlDataAdapter("select * from NHAXUATBAN", conn);
-        DataTable dt = new DataTable();
-        ad.Fill(dt);
-        if (dt.Rows.Count > 0)
-        {
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                ddlMaNXB.Items.Add(new ListItem(dt.Rows[i]["TenNXB"].ToString(), dt.Rows[i]["MaNXB"].ToString()));
-            }
-        }
-    }
+  
     private void showLoai()
     {
-        //Lấy Ra theo Loại
+       
         ddlMaTL.Items.Clear();
         ddlMaTL.Items.Add(new ListItem("Chọn loại", "0"));
         SqlDataAdapter ad = new SqlDataAdapter("select * from THELOAI", conn);
@@ -128,11 +113,27 @@ public partial class Admin : System.Web.UI.Page
             }
         }
     }
+    private void showNhaXuatBan()
+    {
+
+        ddlMaNXB.Items.Clear();
+        ddlMaNXB.Items.Add(new ListItem("Chọn nhà xuất bản", "0"));
+        SqlDataAdapter ad = new SqlDataAdapter("select * from NHAXUATBAN", conn);
+        DataTable dt = new DataTable();
+        ad.Fill(dt);
+        if (dt.Rows.Count > 0)
+        {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ddlMaNXB.Items.Add(new ListItem(dt.Rows[i]["TenNXB"].ToString(), dt.Rows[i]["MaNXB"].ToString()));
+            }
+        }
+    }
     private void showTacGia()
     {
-        // Lấy ra thông tin hàng theo thương hiệu
-        ddlMaNXB.Items.Clear();
-        ddlMaNXB.Items.Add(new ListItem("Chọn tác giả", "0"));
+
+        ddlMaTG.Items.Clear();
+        ddlMaTG.Items.Add(new ListItem("Chọn tác giả", "0"));
         SqlDataAdapter ad = new SqlDataAdapter("select * from TACGIA", conn);
         DataTable dt = new DataTable();
         ad.Fill(dt);
@@ -140,7 +141,7 @@ public partial class Admin : System.Web.UI.Page
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                ddlMaNXB.Items.Add(new ListItem(dt.Rows[i]["TenTG"].ToString(), dt.Rows[i]["MaTG"].ToString()));
+                ddlMaTG.Items.Add(new ListItem(dt.Rows[i]["TenTG"].ToString(), dt.Rows[i]["MaTG"].ToString()));
             }
         }
     }
