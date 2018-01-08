@@ -115,7 +115,7 @@
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtSDT" Display="Dynamic" ErrorMessage="* Nhập số điện thoại" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSDT" ErrorMessage="Số điện thoại không hợp lệ" ForeColor="Red" ValidationExpression="0\d{1,11}"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSDT" ErrorMessage="Số điện thoại không hợp lệ" ForeColor="Red" ValidationExpression="0\d{1,9,11}"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>

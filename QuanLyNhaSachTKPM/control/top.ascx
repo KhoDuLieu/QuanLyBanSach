@@ -1,5 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="top.ascx.cs" Inherits="control_top" %>
-
+<style type="text/css">
+    
+</style>
+<table style="width:100px;">
+    <tr>
+        <td>
+            <img class="auto-style1" src="../image/logo1.png" /></td>
+    </tr>
+    </table>
 <asp:Panel ID="pnl_guest" runat="server">
     <asp:TextBox ID="txtUsername" runat="server" placeholder="Tài khoản"></asp:TextBox>
     <asp:TextBox ID="txtPass" runat="server" placeholder="Mật khẩu" TextMode="Password"></asp:TextBox>

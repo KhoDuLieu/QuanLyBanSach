@@ -66,7 +66,7 @@ public partial class CartInfo : System.Web.UI.Page
         ddlDistrict.Items.Clear();
         //hiển thị danh sách phường xã tỉnh thành phố khi đã đký và đăng nhập
         ddlDistrict.Items.Add(new ListItem("Chọn Quận/Huyện", "0"));
-        SqlDataAdapter ad = new SqlDataAdapter("Select * from QUAN_HUYEN where TTPID = " + quan, conn);
+        SqlDataAdapter ad = new SqlDataAdapter("Select * from QUAN_HUYEN where TTPID = " + tinh, conn);
         DataTable dt = new DataTable();
         ad.Fill(dt);
         if (dt.Rows.Count > 0)
