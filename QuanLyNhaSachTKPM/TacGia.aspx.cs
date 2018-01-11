@@ -81,6 +81,20 @@ public partial class TacGia : System.Web.UI.Page
     }
     protected void GVTG_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-
+         if (e.CommandName == "CapNhat")
+        {
+            foreach (GridViewRow r in GVTG.Rows)
+            {
+                if (GVTG.DataKeys[r.DataItemIndex].Value.ToString() == e.CommandArgument.ToString())
+                {
+                    TextBox txtTenTG = (TextBox)r.Cells[2].FindControl("txtTenTG");
+                    string tentg = txtTenTG.Text.ToString();
+                    TacGiaBLL hb = new TacGiaBLL();
+                    hb.capNhatTG(int.Parse(e.CommandArgument.ToString()),tentg);
+                    string scr = "<script>alert('Cập nhật thành công.')</script>";
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "Thông báo", scr);
+                }
+            }
+        }
     }
-}
+  }

@@ -90,5 +90,26 @@ public partial class NhaXuatBan : System.Web.UI.Page
     protected void GVNXB_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         
+         if (e.CommandName == "CapNhat")
+        {
+            foreach (GridViewRow r in GVNXB.Rows)
+            {
+                if (GVNXB.DataKeys[r.DataItemIndex].Value.ToString() == e.CommandArgument.ToString())
+                {
+                    TextBox txtTenNXB = (TextBox)r.Cells[2].FindControl("txtTenNXB");
+                    string tennxb = txtTenNXB.Text.ToString();
+                     TextBox txtEmail = (TextBox)r.Cells[3].FindControl("txtEmail");
+                    string email = txtEmail.Text.ToString();
+                     TextBox txtSDT = (TextBox)r.Cells[4].FindControl("txtSDT");
+                    string sdt = txtSDT.Text.ToString();
+                     TextBox txtDiaChi = (TextBox)r.Cells[5].FindControl("txtDiaChi");
+                    string diachi = txtDiaChi.Text.ToString();
+                    NhaXuatBanBLL hb = new NhaXuatBanBLL();
+                    hb.capNhatNXB(int.Parse(e.CommandArgument.ToString()),tennxb,email,sdt,diachi);
+                    string scr = "<script>alert('Cập nhật thành công.')</script>";
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "Thông báo", scr);
+                }
+            }
+        }
     }
-}
+    }

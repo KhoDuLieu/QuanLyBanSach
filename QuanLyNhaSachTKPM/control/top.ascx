@@ -5,7 +5,7 @@
 <table style="width:100px;">
     <tr>
         <td>
-            <img class="auto-style1" src="../image/logo1.png" /></td>
+            <img  src="../image/logo1.png" /></td>
     </tr>
     </table>
 <asp:Panel ID="pnl_guest" runat="server">

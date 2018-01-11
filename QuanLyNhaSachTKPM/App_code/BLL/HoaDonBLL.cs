@@ -26,7 +26,6 @@ public class HoaDonBLL
         SqlCommand cmd = new SqlCommand("insert_hoaDon", conn);
         cmd.CommandType = CommandType.StoredProcedure;
         SqlParameter[] par = new SqlParameter[]{
-            new SqlParameter("@MaHD",SqlDbType.NVarChar),
             new SqlParameter("@TenNguoiDat",SqlDbType.NVarChar),
             new SqlParameter("@DiaChiNguoiDat",SqlDbType.NVarChar),
             new SqlParameter("@SDTNguoiDat",SqlDbType.NVarChar),
@@ -36,8 +35,7 @@ public class HoaDonBLL
             new SqlParameter("@SDTNguoiNhan",SqlDbType.NVarChar),
             new SqlParameter("@EmailNguoiNhan",SqlDbType.NVarChar),
             new SqlParameter("@NgayDatHang",SqlDbType.DateTime),
-            new SqlParameter("@MaUser",SqlDbType.Int)};
-        par[0].Value = hd.Mahd;
+            };
         par[1].Value = hd.Tennguoidat;
         par[2].Value = hd.Diachinguoidat;
         par[3].Value = hd.SDTnguoidat;
@@ -47,7 +45,7 @@ public class HoaDonBLL
         par[7].Value = hd.SDTnguoinhan;
         par[8].Value = hd.Emailnguoinhan;
         par[9].Value = hd.Ngaydathang;
-        par[10].Value = hd.MaUser;
+        
         cmd.Parameters.AddRange(par);
         int i = cmd.ExecuteNonQuery();
         conn.Close();

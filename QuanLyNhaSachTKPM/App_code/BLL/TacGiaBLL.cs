@@ -70,13 +70,13 @@ public class TacGiaBLL
         return i;
     }
 
-    public int capNhatTL(int MaTG, string TenTG)
+    public int capNhatTG(int MaTG, string TenTG)
     {
         conn.Open();
-        SqlCommand cmd = new SqlCommand("update TACGIA set TenNXB=@TenNXB where MaTG=@MaTG", conn);
+        SqlCommand cmd = new SqlCommand("update TACGIA set TenTG=@TenTG where MaTG=@MaTG", conn);
         SqlParameter[] par = new SqlParameter[]{
             new SqlParameter("@MaTG",SqlDbType.Int),
-            new SqlParameter("@TenTG",SqlDbType.NVarChar),
+            new SqlParameter("@TenTG",SqlDbType.NVarChar)
            
         };
 

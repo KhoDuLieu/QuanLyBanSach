@@ -82,10 +82,10 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Tên tác giả">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("TenTG") %>'></asp:Label>
+                    <asp:TextBox ID="txtTenTG" runat="server" Text='<%# Eval("TenTG") %>' Width="70%"></asp:TextBox>
                 </ItemTemplate>
+                
             </asp:TemplateField>
-            
             <asp:TemplateField HeaderText="">
                 <ItemTemplate> 
                     <asp:LinkButton ID="Button1" runat="server" CommandName="CapNhat" CommandArgument='<%# Eval("MaTG") %>'

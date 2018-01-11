@@ -68,12 +68,12 @@
                 </td>
         </tr>
     </table>
-    <asp:GridView ID="GVTL" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="100%" OnRowDeleting="GVTL_RowDeleting" DataKeyNames="MaTL" AllowPaging="True" OnPageIndexChanging="GVTL_PageIndexChanging" PageSize="5" OnRowCommand="GVTL_RowCommand" >
+    <asp:GridView ID="GVTL" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="100%" OnRowDeleting="GVTL_RowDeleting" DataKeyNames="MaTL" AllowPaging="True" OnPageIndexChanging="GVTL_PageIndexChanging" OnRowCommand="GVTL_RowCommand" PageSize="5" >
         <Columns>
-           <%-- <asp:TemplateField HeaderText="STT">
+            <asp:TemplateField HeaderText="STT">
                 <ItemTemplate><%#get_stt() %></ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" />
-            </asp:TemplateField>--%>
+            </asp:TemplateField>
             <asp:TemplateField HeaderText="Mã thể loại" InsertVisible="False">
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("MaTL") %>'></asp:Label>
@@ -82,14 +82,14 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Tên thể loại">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("TenTL") %>'></asp:Label>
+                    <asp:TextBox ID="txtTenTL" runat="server" Text='<%# Eval("TenTL") %>' Width="50%"></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             
             <asp:TemplateField HeaderText="">
                 <ItemTemplate> 
-                    <asp:LinkButton ID="Button1" runat="server" CommandName="CapNhat" CommandArgument='<%# Eval("MaTL") %>'
-                            onclientclick="return confirm('Bạn có muốn cập nhật không?');" Text="Update" CausesValidation="False" /> 
+                    <asp:LinkButton ID="TL" runat="server" CommandName="CP" CommandArgument='<%# Eval("MaTL") %>'
+                            onclientclick="return confirm('Bạn có muốn cập nhật không?');" Text="Update" CausesValidation="False" ViewStateMode="Inherit" /> 
                  </ItemTemplate>
             </asp:TemplateField> 
             <asp:TemplateField HeaderText="">

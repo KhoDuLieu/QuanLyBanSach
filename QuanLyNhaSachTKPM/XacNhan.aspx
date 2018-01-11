@@ -4,9 +4,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style1 {
-            width: 120px;
-        }
+       
         .auto-style2 {
             width: 380px;
         }

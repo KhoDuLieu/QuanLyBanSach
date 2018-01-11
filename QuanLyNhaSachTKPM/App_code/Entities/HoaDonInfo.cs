@@ -26,9 +26,10 @@ public class HoaDonInfo
     string emailnguoinhan;
     string trangthai;
     DateTime ngaydathang;
+    int mauser;
     int masach;
     int soluong;
-    int mauser;
+   
     public string Mahd
     {
         set { mahd = value; }

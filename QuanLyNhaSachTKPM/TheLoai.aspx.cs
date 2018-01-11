@@ -81,6 +81,22 @@ public partial class TheLoai : System.Web.UI.Page
     }
     protected void GVTL_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-
+        
+         if (e.CommandName == "CP")
+        {
+            foreach (GridViewRow r in GVTL.Rows)
+            {
+                if (GVTL.DataKeys[r.DataItemIndex].Value.ToString() == e.CommandArgument.ToString())
+                {
+                    TextBox txtTenTL = (TextBox)r.Cells[2].FindControl("txtTenTL");
+                    string tentl = txtTenTL.Text.ToString();
+                    TheLoaiBLL hb = new TheLoaiBLL();
+                    hb.capNhatTL(int.Parse(e.CommandArgument.ToString()),tentl);
+                   
+                    string scr = "<script>alert('Cập nhật thành công.')</script>";
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "Thông báo", scr);
+                }
+            }
+        }
     }
 }

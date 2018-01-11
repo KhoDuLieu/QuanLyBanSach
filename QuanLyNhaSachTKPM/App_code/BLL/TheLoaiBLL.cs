@@ -76,7 +76,7 @@ public class TheLoaiBLL
         SqlCommand cmd = new SqlCommand("update THELOAI set TenTL=@TenTL where MaTL=@MaTL", conn);
         SqlParameter[] par = new SqlParameter[]{
             new SqlParameter("@MaTL",SqlDbType.Int),
-            new SqlParameter("@TenTL",SqlDbType.NVarChar),
+            new SqlParameter("@TenTL",SqlDbType.NVarChar)
            
         };
 

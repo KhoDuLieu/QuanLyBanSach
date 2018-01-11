@@ -109,22 +109,22 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Tên nhà xuất bản">
                 <ItemTemplate>
-                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("TenNXB") %>'></asp:Label>
+                    <asp:TextBox ID="txtTenNXB" runat="server" Text='<%# Eval("TenNXB") %>'></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Email">
                 <ItemTemplate>
-                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("Email") %>'></asp:Label>
+                    <asp:TextBox ID="txtEmail" runat="server" Text='<%# Eval("Email") %>'></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Số điện thoại">
                 <ItemTemplate>
-                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("SDT") %>'></asp:Label>
+                    <asp:TextBox ID="txtSDT" runat="server" Text='<%# Eval("SDT") %>'></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Địa chỉ">
                 <ItemTemplate>
-                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("DiaChi") %>'></asp:Label>
+                    <asp:TextBox ID="txtDiaChi" runat="server" Text='<%# Eval("DiaChi") %>'></asp:TextBox>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="">
